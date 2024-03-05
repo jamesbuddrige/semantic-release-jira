@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - master
-      - ci/*
 
 jobs:
   build:
@@ -27,25 +26,3 @@ jobs:
       - run: yarn build
       - run: yarn lint
       - run: yarn test
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install semantic-release and plugins
-        run: |
-          yarn global add \
-            semantic-release \
-            @semantic-release/changelog \
-            @semantic-release/exec \
-            @semantic-release/git \
-            @semantic-release/github \
-            @semantic-release/npm
-
-      - name: Run semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
-
