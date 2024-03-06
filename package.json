@@ -63,6 +63,11 @@
         "prerelease": "prerelease"
       },
       {
+        "name": "master",
+        "channel": "prerelease",
+        "prerelease": "prerelease"
+      },
+      {
         "name": "prod"
       }
     ]
