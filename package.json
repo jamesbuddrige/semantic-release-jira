@@ -1,5 +1,5 @@
 {
-  "name": "semantic-release-jira",
+  "name": "@jamesbuddrige/semantic-release-jira",
   "version": "1.0.0-prerelease.3",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
