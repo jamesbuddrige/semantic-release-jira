@@ -78,21 +78,15 @@ async function editIssueFixVersions(config: PluginConfig, context: GenerateNotes
                                     properties: undefined as any,
                                   });
     }
-  } catch (err) {
-    const allowedStatusCodes = [400, 404];
-    let { statusCode } = err;
-    if (typeof err === 'string') {
-      try {
-        err = JSON.parse(err);
-        statusCode = statusCode || err.statusCode;
-      } catch (err) {
-          // it's not json :shrug:
-      }
-    }
-    if (allowedStatusCodes.indexOf(statusCode) === -1) {
-      throw err;
-    }
-    context.logger.error(`Unable to update issue ${issueKey} statusCode: ${statusCode}`);
+  } catch (exception: any) {
+    const allowedMessages = [
+      /Issue does not exist/i,
+      /Field 'fixVersions' cannot be set/i
+    ];
+
+    const messages = [...(exception?.errorMessages || []), Object.entries(exception?.errors || {})];
+    const unknown = messages.filter(e => !allowedMessages.some(regex => regex.test(e)));
+    context.logger.error(`Unable to update issue ${issueKey}: ${unknown.join('\n')}\n${JSON.stringify(exception, null, 2)}`);
   }
 }
 
@@ -116,6 +110,11 @@ export async function success(config: PluginConfig, context: GenerateNotesContex
   const jira = makeClient(config, context);
 
   const project = await jira.projects.getProject({ projectIdOrKey: config.projectId });
+
+  if (!project.id) {
+    throw new Error('Missing project id!');
+  }
+
   const { id: releaseVersionId } = await findOrCreateVersion(config, context, jira, project.id, newVersionName, newVersionDescription);
 
   if (!releaseVersionId) {
