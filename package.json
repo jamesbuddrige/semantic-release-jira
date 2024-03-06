@@ -1,15 +1,15 @@
 {
   "name": "semantic-release-jira-releases",
-  "version": "0.7.2",
+  "version": "1.0.0-prerelease.2",
   "main": "dist/lib/index.js",
-  "repository": "https://github.com/UpHabit/semantic-release-jira-releases",
+  "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
   "private": false,
   "scripts": {
     "prepublishOnly": "mkdir -p dist && rm -rf dist && tsc -p .",
     "lint": "tslint -p .",
     "build": "tsc -p .",
-    "test": " yarn jest"
+    "test": " jest"
   },
   "dependencies": {
     "@semantic-release/error": "^2.2.0",
@@ -33,9 +33,8 @@
     "commitizen": "^4.3.0",
     "eslint": "^8.57.0",
     "jest": "^26.1.0",
-    "madge": "^6.1.0",
     "semantic-release": "^23.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "4.6.4"
   },
   "release": {
     "plugins": [

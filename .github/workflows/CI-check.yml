@@ -20,9 +20,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn install --pure-lockfile
-      - run: ./node_modules/.bin/madge -c .
-      - run: yarn audit
-      - run: yarn build
-      - run: yarn lint
-      - run: yarn test
+      - run: npm ci
+      - run: npm audit
+      - run: npm run build
+      - run: npm run lint
+      - run: npm run test
