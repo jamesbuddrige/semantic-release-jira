@@ -2,7 +2,7 @@
   "name": "semantic-release-jira-releases",
   "version": "0.7.2",
   "main": "dist/lib/index.js",
-  "repository": "https://github.com/UpHabit/semantic-release-jira-releases",
+  "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
   "private": false,
   "scripts": {
