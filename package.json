@@ -14,7 +14,6 @@
   "dependencies": {
     "@semantic-release/error": "^2.2.0",
     "@types/request": "^2.48.4",
-    "jira-connector": "^3.1.0",
     "jira.js": "^3.0.4",
     "lodash": "^4.17.19",
     "p-limit": "^2.2.2",
@@ -34,7 +33,7 @@
     "commitizen": "^4.3.0",
     "eslint": "^8.57.0",
     "jest": "^26.1.0",
-    "madge": "^3.8.0",
+    "madge": "^6.1.0",
     "semantic-release": "^23.0.0",
     "typescript": "^3.8.3"
   },
