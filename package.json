@@ -5,6 +5,9 @@
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepublishOnly": "mkdir -p dist && rm -rf dist && tsc -p .",
     "lint": "tslint -p .",
