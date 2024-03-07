@@ -26,9 +26,9 @@ The plugin should be added to your config
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
     ["semantic-release-jira-releases", {
-      "projectId": "UH",
+      "projectId": "ABC",
       "releaseNameTemplate": "Test v${version}",
-      "jiraHost": "uphabit.atlassian.net",
+      "jiraHost": "jira-domain.atlassian.net",
       "ticketPrefixes": [ "TEST", "UH"],
       "ticketRegex": "[a-zA-Z]{3,5}-\\d{3,5}"
     }]
