@@ -25,7 +25,7 @@ The plugin should be added to your config
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/git",
-    ["semantic-release-jira-releases", {
+    ["@jamesbuddrige/semantic-release-jira", {
       "projectId": "ABC",
       "releaseNameTemplate": "Test v${version}",
       "jiraHost": "jira-domain.atlassian.net",
