@@ -9,8 +9,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "mkdir -p dist && rm -rf dist && tsc -p .",
-    "lint": "tslint -p .",
+    "lint": "eslint . --ext .ts",
     "build": "tsc -p .",
     "test": " jest"
   },
