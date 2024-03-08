@@ -1,6 +1,6 @@
 {
   "name": "@jamesbuddrige/semantic-release-jira",
-  "version": "1.0.0-prerelease.7",
+  "version": "1.0.0-prerelease.8",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
