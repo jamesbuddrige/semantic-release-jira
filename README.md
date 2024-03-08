@@ -28,7 +28,7 @@ The plugin should be added to your config
     ["@jamesbuddrige/semantic-release-jira", {
       "projectId": "ABC",
       "releaseNameTemplate": "Test v${version}",
-      "jiraHost": "jira-domain.atlassian.net",
+      "jiraHost": "https://jira-domain.atlassian.net",
       "ticketPrefixes": [ "TEST", "UH"],
       "ticketRegex": "[a-zA-Z]{3,5}-\\d{3,5}"
     }]
