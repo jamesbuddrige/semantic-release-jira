@@ -1,13 +1,15 @@
 {
-  "name": "semantic-release-jira-releases",
-  "version": "1.0.0",
+  "name": "@jamesbuddrige/semantic-release-jira",
+  "version": "1.0.0-prerelease.12",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "prepublishOnly": "mkdir -p dist && rm -rf dist && tsc -p .",
-    "lint": "tslint -p .",
+    "lint": "eslint . --ext .ts",
     "build": "tsc -p .",
     "test": " jest"
   },
