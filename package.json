@@ -14,7 +14,6 @@
     "test": " jest"
   },
   "dependencies": {
-    "@jamesbuddrige/semantic-release-jira": "^2.0.0-prerelease.2",
     "@semantic-release/error": "^2.2.0",
     "@types/request": "^2.48.4",
     "jira.js": "^3.0.4",
