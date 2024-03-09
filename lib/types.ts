@@ -118,4 +118,9 @@ export interface PluginConfig extends BaseConfig {
    * include the release date when creating a release in jira
    */
   setReleaseDate?: boolean;
+
+  /**
+   * Only create a release in the default channel (no pre-release channels)
+   */
+  onlyDefaultChannel?: boolean;
 }
