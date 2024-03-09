@@ -47,7 +47,8 @@ export const previousRelease: PreviousRelease = {
 export const upcomingRelease: UpcomingRelease = {
   ...previousRelease,
   notes: '',
-  type: ''
+  type: '',
+  channel: ''
 }
 
 export const pluginConfig: Partial<PluginConfig> = {
