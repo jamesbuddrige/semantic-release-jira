@@ -92,7 +92,7 @@ async function editIssueFixVersions(config: PluginConfig, context: GenerateNotes
 
 export async function success(config: PluginConfig, context: GenerateNotesContext): Promise<void> {
   // Confirm it's a not a pre-release (undefined), otherwise we don't want to create a release in Jira
-    if (context.nextRelease.channel !== undefined) {
+    if (context.nextRelease.channel !== false) {
         context.logger.info(`Skipping release creation for pre-release`);
         return;
     } else {
