@@ -40,7 +40,7 @@ export interface PreviousRelease {
 export interface UpcomingRelease extends PreviousRelease {
   notes: string;
   type: string;
-  channel: string;
+  channel: string | false | null;
 }
 
 export interface GenerateNotesContext extends PluginContext {
