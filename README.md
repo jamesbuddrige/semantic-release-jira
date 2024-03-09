@@ -34,9 +34,8 @@ The plugin should be added to your config
     }]
   ]
 }
-
-Please note that `ticketRegex` cannot be used together with `ticketPrefixes`.
 ```
+Please note that `ticketRegex` cannot be used together with `ticketPrefixes`.
 ```typescript
 interface Config {
   /**
@@ -90,12 +89,18 @@ interface Config {
   networkConcurrency?: number;
 
   /**
-   * indicates if a new release created in jira should be set as released
+   * Indicates if a new release created in jira should be set as released
    */
   released?: boolean;
+  
   /**
-   * include the release date when creating a release in jira
+   * Include the release date when creating a release in jira
    */
   setReleaseDate?: boolean;
+
+  /**
+   * Only create a release in the default channel (no pre-release channels)
+   */
+  onlyDefaultChannel?: boolean;
 }
 ```
