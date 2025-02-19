@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import pLimit from 'p-limit';
+const { default: pLimit } = await import('p-limit');
 
-import { JiraClient, makeClient, Version } from './jira';
-import { DEFAULT_RELEASE_DESCRIPTION_TEMPLATE, DEFAULT_VERSION_TEMPLATE, GenerateNotesContext, PluginConfig } from './types';
-import { escapeRegExp } from './util';
+import { JiraClient, makeClient, Version } from './jira.js';
+import { DEFAULT_RELEASE_DESCRIPTION_TEMPLATE, DEFAULT_VERSION_TEMPLATE, GenerateNotesContext, PluginConfig } from './types.js';
+import { escapeRegExp } from './util.js';
 
 export function getTickets(config: PluginConfig, context: GenerateNotesContext): string[] {
   let patterns: RegExp[];

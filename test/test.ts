@@ -1,6 +1,6 @@
-import { getTickets } from "../lib/success";
+import { getTickets } from "../lib/success.js";
 import { pluginConfig, context } from "./fakedata";
-import { PluginConfig } from "../lib/types";
+import { PluginConfig } from "../lib/types.js";
 
 describe('Success tests', () => {
   describe('#getTickets', () => {

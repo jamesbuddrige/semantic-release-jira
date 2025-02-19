@@ -1,5 +1,6 @@
 {
   "name": "@jamesbuddrige/semantic-release-jira",
+  "type": "module",
   "version": "2.4.0",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
@@ -15,7 +16,7 @@
     "test": " jest"
   },
   "dependencies": {
-    "@semantic-release/error": "^3.0.0",
+    "@semantic-release/error": "^4.0.0",
     "@types/request": "^2.48.12",
     "jira.js": "^4.0.6",
     "lodash": "^4.17.21",

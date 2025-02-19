@@ -1,4 +1,4 @@
-import { BaseConfig, Person, Commit, PreviousRelease, UpcomingRelease, PluginConfig, PluginContext, GenerateNotesContext } from "../lib/types";
+import { BaseConfig, Person, Commit, PreviousRelease, UpcomingRelease, PluginConfig, PluginContext, GenerateNotesContext } from "../lib/types.js";
 
 export const baseConfig: BaseConfig = {
   $0: '',

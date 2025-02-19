@@ -4,12 +4,12 @@ declare module '@semantic-release/error' {
     private code: any;
     private details: any;
 
-    constructor (
-      message?: any,
-      code?: any,
-      details?: any,
+    constructor(
+        message?: any,
+        code?: any,
+        details?: any,
     );
   }
 
-  export = SemanticReleaseError;
+  export default SemanticReleaseError;
 }
