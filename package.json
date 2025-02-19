@@ -1,7 +1,7 @@
 {
   "name": "@jamesbuddrige/semantic-release-jira",
   "type": "module",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "main": "dist/lib/index.js",
   "repository": "https://github.com/jamesbuddrige/semantic-release-jira",
   "license": "MIT",
